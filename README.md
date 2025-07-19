@@ -28,3 +28,4 @@ Each lesson is in a separat branch. You can switch to the branch of the lesson y
 
 - [Environment setup](https://www.youtube.com/watch?v=G9s0y80tOyc)
 - [Project setup](https://youtu.be/LSScfSxuYRg)
+- [Your first test](https://youtu.be/olWl_4ooKCc)
