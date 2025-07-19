@@ -22,8 +22,8 @@ Navigate to the cloned repository & run `make`. It will build the Docker image a
 make
 ```
 
-## Lessons
+## Lessons 🎥
 
 Each lesson is in a separat branch. You can switch to the branch of the lesson you want to learn.
 
-- [Introduction](https://github.com/imdhemy/tut-phpunit-12)
+- [Environment setup](https://www.youtube.com/watch?v=G9s0y80tOyc)  
