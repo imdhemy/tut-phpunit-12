@@ -19,11 +19,11 @@ final readonly class CreateInvoiceHandler
      * @return void - In case of success, the method does not return any value.
      * @throws CreateInvoiceFailedException - if the invoice creation fails.
      */
-    public function handle(CreateInvoicePayload $payload, string $taxNumber, string $username): void
+    public function handle(CreateInvoicePayload $payload): void
     {
         try {
-            $request = $this->requestFactory->createInvoiceRequest($payload, $taxNumber, $username);
-            
+            $request = $this->requestFactory->createInvoiceRequest($payload);
+
             $this->client->sendRequest($request);
         } catch (ClientExceptionInterface $e) {
             throw new CreateInvoiceFailedException(previous: $e);
