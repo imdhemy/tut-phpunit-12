@@ -21,5 +21,7 @@
       "Tests\\": "tests/"
     }
   },
-  "require": {}
+  "require": {
+    "guzzlehttp/guzzle": "^7.9"
+  }
 }
