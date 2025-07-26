@@ -42,7 +42,10 @@ final class RequestFactoryTest extends TestCase
             'https://portal.smart-code.app/sc/workspace/finance/invoices?taxNumber=300000000000003&username=username',
             (string)$actual->getUri(),
         );
-        $this->assertContains('application/json', $actual->getHeaders()['Content-Type']);
+        $this->assertSame('application/json', $actual->getHeaderLine('Content-Type'));
+        $this->assertSame($credential->username, $actual->getHeaderLine('X-username'));
+        $this->assertSame($credential->password, $actual->getHeaderLine('X-password'));
+        $this->assertSame($credential->taxNumber, $actual->getHeaderLine('X-tax-number'));
         $this->assertSame(json_encode([
             'invoice_mast' => [
                 'TRNS_DATE' => '2025-05-23',

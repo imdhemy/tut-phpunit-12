@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Imdhemy\Acme\Tax;
 
+use JsonException;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 
@@ -25,7 +26,7 @@ final readonly class CreateInvoiceHandler
             $request = $this->requestFactory->createInvoiceRequest($payload);
 
             $this->client->sendRequest($request);
-        } catch (ClientExceptionInterface $e) {
+        } catch (ClientExceptionInterface|JsonException $e) {
             throw new CreateInvoiceFailedException(previous: $e);
         }
     }
