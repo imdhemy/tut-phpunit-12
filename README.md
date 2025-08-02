@@ -30,6 +30,7 @@ Each lesson is in a separat branch. You can switch to the branch of the lesson y
 - [Project setup](https://youtu.be/LSScfSxuYRg)
 - [Your first test](https://youtu.be/olWl_4ooKCc)
 - [Basic assertions](https://youtu.be/23T8BJCcUdI)
+- [Data providers](https://youtu.be/tdgEbWmGbZU)
 
 ## Examples ✅
 
